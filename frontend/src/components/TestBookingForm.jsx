@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../css/testbookingform.css";
+import "../css/TestBookingForm.css";
 
 export default function BookingFormModal({ testId, onClose, onSubmit }) {
   const [bookingDate, setBookingDate] = useState("");

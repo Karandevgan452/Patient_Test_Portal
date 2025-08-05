@@ -1,4 +1,4 @@
-import "../css/labtestpage.css";
+import "../css/labTestPage.css";
 
 export default function TestCard({ test, onBook }) {
   return (

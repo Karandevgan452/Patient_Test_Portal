@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/authform.css";
+import "../css/AuthForm.css";
 import { toast } from "react-toastify";
 import API from "../services/api";
 

@@ -1,7 +1,7 @@
 import  { useEffect, useState } from "react";
 import TestCard from "../components/TestCard";
 import TestBookingForm from "../components/TestBookingForm";
-import "../css/labtestpage.css";
+import "../css/labTestPage.css";
 import { toast } from "react-toastify";
 import {  useNavigate } from "react-router-dom";
 import API from "../services/api";
