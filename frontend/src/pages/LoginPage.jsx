@@ -1,8 +1,6 @@
-// src/pages/LoginPatient.jsx
-import React, { useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/AuthForm.css";
+import "../css/authform.css";
 import { toast } from "react-toastify";
 import API from "../services/api";
 

@@ -1,5 +1,4 @@
-import React from "react";
-import "../css/labTestPage.css";
+import "../css/labtestpage.css";
 
 export default function TestCard({ test, onBook }) {
   return (

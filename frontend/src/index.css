@@ -1,4 +1,3 @@
-/* Modern Global Styles - Clean & Minimalist */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Clean Navbar Styles - Consistent with navbar.css */
 .navbar {
   position: sticky;
   top: 0;
@@ -33,7 +31,6 @@ body {
   justify-content: space-between;
 }
 
-/* Clean Brand/Logo Section */
 .navbar-brand {
   flex-shrink: 0;
 }
@@ -84,7 +81,6 @@ body {
   margin: 0;
 }
 
-/* Clean Desktop Navigation Menu */
 .navbar-menu {
   display: flex;
   align-items: center;
@@ -141,7 +137,6 @@ body {
   transform: translateY(-1px);
 }
 
-/* Clean User Section */
 .user-section {
   display: flex;
   align-items: center;
@@ -225,7 +220,7 @@ body {
   transform: translateX(1px);
 }
 
-/* Clean Auth Buttons */
+
 .auth-buttons {
   display: flex;
   align-items: center;
@@ -266,8 +261,6 @@ body {
   border-color: #2563eb;
   transform: translateY(-1px);
 }
-
-/* Clean Mobile Menu Toggle */
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -325,7 +318,7 @@ body {
   transform: translateY(-0.5rem) rotate(-45deg);
 }
 
-/* Clean Mobile Menu */
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -483,7 +476,6 @@ body {
   border-color: #2563eb;
 }
 
-/* Clean Mobile User Section */
 .mobile-user-section {
   margin-top: auto;
   padding: 1rem;
@@ -537,7 +529,6 @@ body {
   padding-top: 1rem;
 }
 
-/* Clean Responsive Design */
 @media (max-width: 991px) {
   .navbar-menu {
     display: none;
@@ -601,7 +592,6 @@ body {
   }
 }
 
-/* Clean Focus states for accessibility */
 .nav-link:focus,
 .mobile-nav-link:focus,
 .logout-btn:focus,
@@ -617,7 +607,6 @@ body {
   outline-offset: 4px;
 }
 
-/* Clean Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

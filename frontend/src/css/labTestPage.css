@@ -256,7 +256,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .lab-tests-page {
     padding: 1.5rem 0;
@@ -320,7 +320,7 @@
   }
 }
 
-/* Focus states for accessibility */
+
 .search-input:focus-visible,
 .book-test-btn:focus-visible,
 .filter-btn:focus-visible {
@@ -328,7 +328,7 @@
   outline-offset: 2px;
 }
 
-/* Reduced motion support */
+
 @media (prefers-reduced-motion: reduce) {
   .test-card,
   .book-test-btn,

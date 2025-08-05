@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import "../css/about.css";
 import { useNavigate } from "react-router-dom";
+
 const AboutPage = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const navigate = useNavigate();

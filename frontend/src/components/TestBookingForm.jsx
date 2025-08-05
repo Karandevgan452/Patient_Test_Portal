@@ -1,6 +1,5 @@
-// BookingFormModal.jsx
-import React, { useState } from "react";
-import "../css/TestBookingForm.css";
+import { useState } from "react";
+import "../css/testbookingform.css";
 
 export default function BookingFormModal({ testId, onClose, onSubmit }) {
   const [bookingDate, setBookingDate] = useState("");

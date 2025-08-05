@@ -17,14 +17,14 @@
   transform: translateY(0);
 }
 
-/* Clean Container */
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Clean Hero Section */
+
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -162,7 +162,7 @@
   letter-spacing: 0.05em;
 }
 
-/* Section Styles */
+
 section {
   padding: 0;
 }
@@ -176,7 +176,6 @@ section {
   letter-spacing: -0.025em;
 }
 
-/* Features Section */
 .features-section {
   background: white;
 }
@@ -225,7 +224,6 @@ section {
   height: 4rem;
   margin: 0 auto 1.5rem;
   background: #3b82f6;
-  /* border: 2px solid #3b82f6; */
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -244,7 +242,6 @@ section {
   line-height: 1.6;
 }
 
-/* Popular Tests Section */
 .popular-tests-section {
   background: #f8fafc;
 }
@@ -353,7 +350,6 @@ section {
   transform: translateY(-2px);
 }
 
-/* How It Works Section */
 .how-it-works-section {
   background: white;
 }
@@ -416,7 +412,6 @@ section {
   z-index: -1;
 }
 
-/* Testimonials Section */
 .testimonials-section {
   background: #f8fafc;
 }
@@ -498,7 +493,6 @@ section {
   transform: scale(1.2);
 }
 
-/* CTA Section */
 .cta-section {
   background: #3b82f6;
   color: white;
@@ -539,7 +533,6 @@ section {
   line-height: 1.6;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
@@ -631,7 +624,6 @@ section {
   }
 }
 
-/* Focus states for accessibility */
 .cta-button:focus-visible,
 .book-test-btn:focus-visible,
 .view-all-btn:focus-visible,
@@ -640,7 +632,6 @@ section {
   outline-offset: 2px;
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .homepage,
   .hero-content,

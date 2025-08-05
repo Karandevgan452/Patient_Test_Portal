@@ -128,7 +128,6 @@
   border-color: #cbd5e1;
 }
 
-/* Responsive Design */
 @media (max-width: 480px) {
   .modal-content {
     padding: 1.5rem;
@@ -144,7 +143,7 @@
   }
 }
 
-/* Focus states for accessibility */
+
 .form-input:focus-visible,
 .submit-btn:focus-visible,
 .cancel-btn:focus-visible,
@@ -153,7 +152,6 @@
   outline-offset: 2px;
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .submit-btn,
   .cancel-btn,

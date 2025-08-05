@@ -11,7 +11,6 @@
   position: relative;
 }
 
-/* Main heading */
 .register-page h2 {
   color: #1e293b;
   font-size: 2.5rem;
@@ -23,7 +22,6 @@
   position: relative;
 }
 
-/* Error message styling */
 .register-page p[style*="color: red"] {
   background: rgba(239, 68, 68, 0.1);
   border: 1px solid rgba(239, 68, 68, 0.3);
@@ -37,7 +35,6 @@
   position: relative;
 }
 
-/* Form container */
 .register-page form {
   background: #ffffff;
   padding: 2.5rem;
@@ -53,7 +50,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Input field styling */
 .register-page input {
   width: 100%;
   padding: 1rem 1.25rem;
@@ -73,19 +69,16 @@
   font-weight: 400;
 }
 
-/* Input focus states */
 .register-page input:focus {
   border-color: #3b82f6;
   background: #ffffff;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-/* Input hover states */
 .register-page input:hover:not(:focus) {
   border-color: #cbd5e1;
 }
 
-/* Button styling */
 .register-page button {
   width: 100%;
   padding: 1rem 2rem;
@@ -120,7 +113,6 @@
   box-shadow: none;
 }
 
-/* Loading animation */
 .register-page button:disabled::before {
   content: '';
   position: absolute;
@@ -141,7 +133,6 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .register-page {
     padding: 1.5rem 1rem;
@@ -182,14 +173,11 @@
   }
 }
 
-/* Focus ring for accessibility */
 .register-page input:focus-visible,
 .register-page button:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
-
-/* High contrast mode */
 @media (prefers-contrast: high) {
   .register-page {
     background: #ffffff;
@@ -208,7 +196,6 @@
   }
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .register-page input,
   .register-page button {

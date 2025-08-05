@@ -26,7 +26,6 @@
   --backdrop-blur: blur(24px);
 }
 
-/* Clean Base Styles */
 .navbar {
   background: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -47,7 +46,6 @@
   align-items: center;
 }
 
-/* Clean Brand/Logo */
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -70,7 +68,6 @@
   transform: translateY(-1px);
 }
 
-/* Remove focus borders and outlines */
 .brand-logo:focus,
 .brand-logo:focus-visible {
   outline: none !important;
@@ -101,7 +98,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%); */
+  
   background: transparent;
   border-radius: 12px;
   pointer-events: none;
@@ -134,8 +131,6 @@
   letter-spacing: -0.025em;
   margin: 0;
 }
-
-/* Navigation Menu */
 .navbar-menu {
   display: flex;
   align-items: center;
@@ -166,7 +161,6 @@
   border: none !important;
 }
 
-/* Remove all focus borders and outlines */
 .nav-link:focus,
 .nav-link:focus-visible,
 .nav-link:active {
@@ -194,7 +188,6 @@
   width: 100%;
 }
 
-/* Active state uses the same line effect as hover */
 .nav-link.active {
   color: var(--primary);
 }
@@ -227,7 +220,6 @@
   transition: var(--transition);
 }
 
-/* User Section */
 .user-section {
   display: flex;
   align-items: center;
@@ -320,7 +312,7 @@
   transform: translateX(1px);
 }
 
-/* Auth Buttons */
+
 .auth-buttons {
   display: flex;
   align-items: center;
@@ -369,7 +361,7 @@
   transform: translateY(-1px);
 }
 
-/* Mobile Menu Toggle */
+
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -435,7 +427,6 @@
   transform: translateY(-0.5rem) rotate(-45deg);
 }
 
-/* Mobile Menu */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -542,7 +533,6 @@
   transform: translateY(-1px);
 }
 
-/* Mobile User Section */
 .mobile-user-section {
   margin-top: auto;
   padding-top: 2rem;
@@ -615,7 +605,6 @@
   transform: translateX(2px);
 }
 
-/* Mobile Auth Buttons */
 .mobile-auth-buttons {
   display: flex;
   flex-direction: column;
@@ -664,7 +653,6 @@
   border-color: var(--primary-dark);
 }
 
-/* Global Focus Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -684,7 +672,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Responsive Design */
 @media (max-width: 991px) {
   .navbar-menu {
     display: none;
@@ -735,7 +722,6 @@ body {
   }
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

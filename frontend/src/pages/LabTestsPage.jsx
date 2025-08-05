@@ -1,13 +1,10 @@
-// src/pages/LabTestsPage.jsx
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import  { useEffect, useState } from "react";
 import TestCard from "../components/TestCard";
 import TestBookingForm from "../components/TestBookingForm";
-import "../css/labTestPage.css";
+import "../css/labtestpage.css";
 import { toast } from "react-toastify";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import API from "../services/api";
-
 
 const LabTestsPage = () => {
   const [tests, setTests] = useState([]);

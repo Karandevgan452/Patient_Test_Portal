@@ -1,9 +1,9 @@
-// src/pages/BookingsPage.jsx
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+
+import  { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import "../css/bookings.css";
 import API from "../services/api";
+
 const BookingsPage = () => {
   const [bookings, setBookings] = useState([]);
   const [error, setError] = useState("");
