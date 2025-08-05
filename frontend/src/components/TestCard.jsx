@@ -1,15 +1,21 @@
 import React from "react";
-import "../css/labtests.css";
+import "../css/labTestPage.css";
 
 export default function TestCard({ test, onBook }) {
   return (
     <div className="test-card">
-      <div className="test-card-header">
-        <h3>{test.name}</h3>
-        <span className="test-price">₹{test.price}</span>
+      <div className="test-header">
+        <div className="test-icon">
+          <span>🧪</span>
+        </div>
+        <h3 className="test-name">{test.name}</h3>
       </div>
       <p className="test-description">{test.description}</p>
-      <button className="book-btn" onClick={() => onBook(test._id)}>
+      <div className="test-details">
+        <div className="test-price">₹{test.price}</div>
+        <div className="test-duration">30 min</div>
+      </div>
+      <button className="book-test-btn" onClick={() => onBook(test._id)}>
         Book Test
       </button>
     </div>

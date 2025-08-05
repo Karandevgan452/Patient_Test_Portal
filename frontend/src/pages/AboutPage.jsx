@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "../css/home.css";
-
+import "../css/about.css";
+import { useNavigate } from "react-router-dom";
 const AboutPage = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
+  const navigate = useNavigate();
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -30,10 +30,25 @@ const AboutPage = () => {
   }, [testimonials.length]);
 
   return (
-    <div className="homepage visible">
+    <div className="about-page">
+      {/* Hero Section */}
+      <section className="about-hero">
+        <div className="about-container">
+          <div className="about-hero-content">
+            <h1>About MediCare</h1>
+            <p>
+              We're revolutionizing healthcare by making lab testing accessible,
+              convenient, and transparent. Our digital platform connects
+              patients with trusted laboratories for accurate and timely
+              results.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works Section */}
       <section className="how-it-works-section">
-        <div className="container">
+        <div className="about-container">
           <h2 className="section-title">How It Works</h2>
           <div className="steps-container">
             <div className="step">
@@ -65,7 +80,7 @@ const AboutPage = () => {
 
       {/* Testimonials Section */}
       <section className="testimonials-section">
-        <div className="container">
+        <div className="about-container">
           <h2 className="section-title">What Our Patients Say</h2>
           <div className="testimonial-carousel">
             {testimonials.map((testimonial, index) => (
@@ -105,14 +120,17 @@ const AboutPage = () => {
 
       {/* CTA Section */}
       <section className="cta-section">
-        <div className="container">
+        <div className="about-container">
           <div className="cta-content">
             <h2 className="cta-title">Ready to Take Control of Your Health?</h2>
             <p className="cta-description">
               Join thousands of patients who trust our digital health platform
               for their lab testing needs.
             </p>
-            <button className="cta-button primary large">
+            <button
+              className="cta-button primary large"
+              onClick={() => navigate("/register")}
+            >
               Start Your Health Journey
             </button>
           </div>

@@ -4,6 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../css/AuthForm.css";
 import { toast } from "react-toastify";
+import API from "../services/api";
+
 const LoginPatient = () => {
   const navigate = useNavigate();
 
@@ -28,8 +30,8 @@ const LoginPatient = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post(
-        "http://localhost:3000/api/patients/login",
+      const res = await API.post(
+        "/patients/login",
         formData
       );
       const data = res.data;
@@ -46,8 +48,7 @@ const LoginPatient = () => {
       toast.success("Login successful.");
       navigate("/");
     } catch (err) {
-        toast.error(err.response?.data?.message || "Login failed.");
-      
+      toast.error(err.response?.data?.message || "Login failed.");
     } finally {
       setLoading(false);
     }
@@ -55,7 +56,7 @@ const LoginPatient = () => {
 
   return (
     <div className="register-page">
-      <h2>Patient Login</h2>
+      <h2>Welcome Back</h2>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <form onSubmit={handleSubmit}>
         <input
@@ -75,7 +76,7 @@ const LoginPatient = () => {
           required
         />
         <button type="submit" disabled={loading}>
-          {loading ? "Logging in..." : "Login"}
+          {loading ? "Signing in..." : "Sign In"}
         </button>
       </form>
     </div>

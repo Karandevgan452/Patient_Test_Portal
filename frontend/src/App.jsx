@@ -4,7 +4,7 @@ import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // Components
 import Navbar from "./components/Navbar";
-
+import Footer from "./components/Footer";
 // Pages
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -61,6 +61,7 @@ export default function App() {
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <ToastContainer position="top-right" autoClose={3000} />
+      <Footer />
     </BrowserRouter>
   );
 }
