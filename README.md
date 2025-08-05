@@ -1,70 +1,78 @@
-# 🧪 Patient Test Portal Platform
 
-A full-stack web application that allows patients to:
+# 🧪 MEDICARE
 
-- Register and log in securely
-- View available medical lab tests
-- Book test appointments as per conveninent dates and time
-- View booking history 
-- Download dummy test reports in PDF format
+A **full-stack web application** where patients can:
 
-This project consists of:
-- **Frontend**: React.js , Css
-- **Backend**: Node.js, Express.js, MongoDB
+- ✅ Register and log in securely  
+- 🔍 Browse available medical lab tests  
+- 📅 Book test appointments at convenient times  
+- 📂 View booking history  
+- 📄 Download dummy test reports in PDF format  
+
+🔗 **Live App**: [https://patient-test-portal.vercel.app/]
 
 ---
 
-## 🔧 Tech Stack
+## 🧰 Tech Stack
 
 ### 🔹 Frontend
-- React.js (with hooks)
+- React.js (with Hooks)
 - React Router
 - Axios
-- CSS 
+- CSS
 
 ### 🔹 Backend
 - Node.js + Express.js
-- MongoDB with Mongoose
+- MongoDB (with Mongoose)
 - JWT for Authentication
 - bcryptjs for password hashing
 - PDFKit for generating PDF reports
-- dotenv for environment config
+- dotenv for environment configuration
 
 ---
 
-## 🚀 Setup Instructions
+## 🌐 Deployment
+
+| Part      | Platform | URL |
+|-----------|----------|-----|
+| **Frontend** | [Vercel](https://vercel.com/) | [patient-test-portal.vercel.app](https://patient-test-portal.vercel.app) |
+| **Backend**  | [Render](https://render.com/) | [patient-test-portal.onrender.com](https://patient-test-portal.onrender.com) |
+
+---
+
+## ⚙️ Getting Started
 
 ### 1. Clone the Repository
 
-
+```bash
 git clone https://github.com/Karandevgan452/Patient_Test_Portal.git
 cd Patient_Test_Portal
-
+````
 
 ---
 
 ### 2. Backend Setup
 
-
+```bash
 cd backend
 npm install
+```
 
+🔐 Create a `.env` file inside the `backend/` directory:
 
-#### 🔐 Create `.env` file in `backend/` directory
-
-
+```env
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_jwt_key
+```
 
-
-#### ▶️ Start Backend Server
+▶️ Start the backend server:
 
 ```bash
 npm start
 ```
 
-Backend will run at: `http://localhost:3000`
+> Backend will run at: `http://localhost:3000`
 
 ---
 
@@ -75,75 +83,79 @@ cd ../frontend
 npm install
 ```
 
-#### ▶️ Start Frontend Dev Server
+▶️ Start the frontend dev server:
 
 ```bash
 npm start
 ```
 
-Frontend will run at: `http://localhost:5173` 
+> Frontend will run at: `http://localhost:5173`
 
-> ⚠️ Make sure both servers are running concurrently.
+✅ **Make sure both servers are running concurrently.**
 
 ---
 
-## 🧠 Project Approach
+## 🧠 Key Features & Approach
 
-* Clean separation of **frontend** and **backend** for scalability
+* Clear separation of **frontend** and **backend** for maintainability
 * JWT-based **authentication system**
-* **Protected routes** using middleware
-* **RESTful APIs** built with Express
-* **PDF generation** for downloadable reports (via PDFKit)
-* React frontend uses **Axios** for HTTP requests, and manages auth state with localStorage
+* **Protected routes** using Express middleware
+* **RESTful APIs** for all core functionalities
+* **PDF generation** for downloadable test reports via PDFKit
+* Used **.env** in both frontend and backend to manage render , mongo link , port and JWT_SECRET
+* Frontend uses **Axios** for HTTP requests and manages auth state with `localStorage`
 
 ---
 
-## 📮 API Endpoints (Backend)
+## 📮 API Endpoints
 
-### Render link(Home Route) : https://patient-test-portal.onrender.com/
+### 🔗 Base URL (Backend Render):
 
-### 🔐 Auth (Patients) — `/api/patients`
+[https://patient-test-portal.onrender.com]
 
-| Method | Endpoint    | Description            |
-| ------ | ----------- | ---------------------- |
-| POST   | `/register` | Register new patient   |
-| POST   | `/login`    | Login existing patient |
+### 🔐 Auth — `/api/patients`
+
+| Method | Endpoint    | Description                |
+| ------ | ----------- | -------------------------- |
+| POST   | `/register` | Register a new patient     |
+| POST   | `/login`    | Log in an existing patient |
 
 ---
 
 ### 🧪 Lab Tests — `/api/tests`
 
-| Method | Endpoint | Description             |
-| ------ | -------- | ----------------------- |
-| GET    | `/`      | Get all available tests |
+| Method | Endpoint | Description              |
+| ------ | -------- | ------------------------ |
+| GET    | `/`      | Retrieve available tests |
 
 ---
 
 ### 📅 Bookings — `/api/bookings`
 
-| Method | Endpoint | Description                        |
-| ------ | -------- | ---------------------------------- |
-| POST   | `/`      | Book a test (auth required)        |
-| GET    | `/:id`      | Get patient bookings (auth needed) |
+| Method | Endpoint | Description                              |
+| ------ | -------- | ---------------------------------------- |
+| POST   | `/`      | Book a lab test (requires auth)          |
+| GET    | `/:id`   | Get a patient's bookings (requires auth) |
 
 ---
 
 ### 📄 Reports — `/api/report`
 
-| Method | Endpoint    | Description                |
-| ------ | ----------- | -------------------------- |
-| GET    | `/download` | Download test report (PDF) (auth required) |
+| Method | Endpoint    | Description                               |
+| ------ | ----------- | ----------------------------------------- |
+| GET    | `/download` | Download test report (PDF, auth required) |
 
 ---
 
-## 📂 Folder Structure
+## 📁 Project Structure
 
+```
 Patient_Test_Portal/
 ├── backend/
+│   ├── config/
 │   ├── controllers/
 │   ├── models/
 │   ├── routes/
-│   ├── config/
 │   ├── server.js
 │   ├── package.json
 │   └── .env
@@ -155,23 +167,15 @@ Patient_Test_Portal/
 │       ├── services/
 │       ├── App.jsx
 │       ├── main.jsx
+|       └── .env
 │       └── ...
 ├── README.md
-
-
-
-## 📢 Author
-
-**\[Karan Devgan]**
-GitHub: [@](https://github.com/yourusername)
+```
 
 ---
 
-## 📜 License
+## 👨‍💻 Author
 
-This project is open-source and available under the [MIT License](LICENSE).
+**Karan Devgan**
+GitHub: [@Karandevgan452](https://github.com/Karandevgan452)
 
-```
-
-Let me know if you want me to include your actual GitHub name or project links in this README.
-```
