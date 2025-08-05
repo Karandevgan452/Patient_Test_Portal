@@ -1,0 +1,389 @@
+/* Register Page Styles */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background elements */
+.register-page::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: float 20s ease-in-out infinite;
+  z-index: 0;
+}
+
+.register-page::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulse 4s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.1); opacity: 0.5; }
+}
+
+/* Main heading */
+.register-page h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.025em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: slideInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  position: relative;
+}
+
+/* Error message styling */
+.register-page p[style*="color: red"] {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: shake 0.5s ease-in-out;
+  z-index: 1;
+  position: relative;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Form container */
+.register-page form {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+  z-index: 1;
+  position: relative;
+}
+
+/* Input field styling */
+.register-page input {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  color: #1e293b;
+  box-sizing: border-box;
+}
+
+.register-page input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+/* Input focus states */
+.register-page input:focus {
+  border-color: #667eea;
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+}
+
+/* Input hover states */
+.register-page input:hover:not(:focus) {
+  border-color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Invalid input styling */
+.register-page input:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+/* Valid input styling */
+.register-page input:valid:not(:placeholder-shown) {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+/* Submit button */
+.register-page button {
+  width: 100%;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button hover effect */
+.register-page button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+/* Button active effect */
+.register-page button:active:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Disabled button state */
+.register-page button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+}
+
+/* Loading animation for button */
+.register-page button:disabled::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animation keyframes */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .register-page {
+    padding: 1rem;
+  }
+  
+  .register-page h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .register-page form {
+    padding: 2rem;
+    border-radius: 20px;
+    gap: 1.25rem;
+  }
+  
+  .register-page input {
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+  }
+  
+  .register-page button {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-page form {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .register-page h2 {
+    font-size: 1.75rem;
+  }
+  
+  .register-page input {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .register-page button {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Focus ring for accessibility */
+.register-page input:focus-visible,
+.register-page button:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .register-page {
+    background: #000;
+  }
+  
+  .register-page form {
+    background: #fff;
+    border: 2px solid #000;
+  }
+  
+  .register-page h2 {
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
+/* Input group container */
+.register-page .input-group {
+  position: relative;
+  width: 100%;
+}
+
+/* Field error styling */
+.register-page .field-error {
+  display: block;
+  color: #ef4444;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  animation: slideInError 0.3s ease-out;
+}
+
+@keyframes slideInError {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Success state for form completion */
+.register-page .success-message {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: slideInDown 0.5s ease-out;
+}
+
+/* Enhanced button states */
+.register-page button:disabled:not(:hover) {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Form progress indicator (optional) */
+.register-page .form-progress {
+  width: 100%;
+  height: 4px;
+  background: rgba(226, 232, 240, 0.3);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.register-page .form-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+  width: 0%;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .register-page::before,
+  .register-page::after,
+  .register-page h2,
+  .register-page form,
+  .register-page input,
+  .register-page button {
+    animation: none;
+    transition: none;
+  }
+  
+  .register-page input:focus,
+  .register-page button:hover {
+    transform: none;
+  }
+}

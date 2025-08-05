@@ -1,0 +1,176 @@
+.bookings-container {
+  padding: 20px;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.bookings-table th,
+.bookings-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.bookings-table th {
+  background-color: #1976d2;
+  color: white;
+}
+
+.bookings-table button {
+  background: #1976d2;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.bookings-table button:hover {
+  background: #0d47a1;
+}
+
+.error-text {
+  color: red;
+}
+
+
+.bookings-page {
+  padding-top: 80px; /* Leave space for navbar */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.booking-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+}
+
+.booking-card button {
+  margin-top: 0.5rem;
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.booking-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+}
+
+
+.booking-card button {
+  margin-right: 0.5rem;
+}
+
+.booking-card button + button {
+  background-color: #28a745;
+}
+
+.booking-card button + button:hover {
+  background-color: #1e7e34;
+}
+
+
+/* General Button Styles */
+button {
+  background-color: #4CAFef; /* Primary blue */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #3a8ad4;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Secondary Button (like Close, View) */
+button.secondary {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+button.secondary:hover {
+  background-color: #e4e4e4;
+}
+
+/* Danger/Alert Button (optional) */
+button.danger {
+  background-color: #e74c3c;
+}
+
+button.danger:hover {
+  background-color: #c0392b;
+}
+
+/* Book Test Button in TestCard */
+.test-card button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Buttons in Bookings Grid */
+.booking-card button {
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+/* Modal Close Button */
+.modal button {
+  margin-top: 15px;
+  width: 100%;
+}
