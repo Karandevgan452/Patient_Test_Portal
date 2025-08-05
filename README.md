@@ -1,4 +1,4 @@
-https://www.loom.com/share/252f4d4e770647be94fa1ab74ad85de7?sid=f7b4af1c-640c-4b25-bf60-2ff58332b2a1
+
 # 🧪 MEDICARE
 
 A **full-stack web application** where patients can:
